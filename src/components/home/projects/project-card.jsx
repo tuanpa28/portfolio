@@ -1,3 +1,4 @@
+import Link from "next/link";
 import * as React from "react";
 
 const ProjectCard = ({ project }) => {
@@ -53,6 +54,34 @@ const ProjectCard = ({ project }) => {
           <div className="ml-4 lg:ml-8 mr-2">
             <span className="text-white">Description:</span>
             <span className="text-cyan-400">{" " + project.description}</span>
+            <span className="text-gray-400">,</span>
+          </div>
+          <div className="ml-4 lg:ml-8 mr-2">
+            <span className="text-white">Preview:</span>
+            <span className="text-cyan-400">
+              {" "}
+              <Link
+                target="_blank"
+                href={project.demo}
+                className="hover:underline"
+              >
+                {project.demo}
+              </Link>
+            </span>
+            <span className="text-gray-400">,</span>
+          </div>
+          <div className="ml-4 lg:ml-8 mr-2">
+            <span className="text-white">sourceCode:</span>
+            <span className="text-cyan-400">
+              {" "}
+              <Link
+                target="_blank"
+                href={project.code}
+                className="hover:underline"
+              >
+                {project.code}
+              </Link>
+            </span>
             <span className="text-gray-400">,</span>
           </div>
           <div>

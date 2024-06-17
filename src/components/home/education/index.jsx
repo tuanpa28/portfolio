@@ -1,5 +1,4 @@
 import Image from "next/image";
-
 import { educations } from "@/utils/data/educations";
 import { BsPersonWorkspace } from "react-icons/bs";
 import lottieFile from "/public/lottie/study.json";

@@ -26,6 +26,15 @@ module.exports = {
       screens: {
         "4k": "1980px",
       },
+      keyframes: {
+        spinner: {
+          from: { transform: "rotate(0)" },
+          to: { transform: "rotate(360deg)" },
+        },
+      },
+      animation: {
+        spinner: "spinner 0.8s linear infinite",
+      },
     },
   },
   plugins: [],

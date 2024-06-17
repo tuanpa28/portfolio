@@ -6,7 +6,7 @@ import HeroSection from "@/components/home/hero-section";
 import Projects from "@/components/home/projects";
 import Skills from "@/components/home/skills";
 
-export default async function Home() {
+export default function Home() {
   return (
     <>
       <HeroSection />

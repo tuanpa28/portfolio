@@ -1,11 +1,9 @@
 import { personalData } from "@/utils/data/personal-data";
 import Image from "next/image";
 import Link from "next/link";
-import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { FaFacebook, FaTwitterSquare } from "react-icons/fa";
+import { BsGithub, BsLinkedin, BsInstagram, BsFacebook } from "react-icons/bs";
 import { MdDownload } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
-import { SiLeetcode } from "react-icons/si";
 
 const HeroSection = () => {
   return (
@@ -49,7 +47,14 @@ const HeroSection = () => {
               target="_blank"
               className="transition-all text-pink-500 hover:scale-125 duration-300"
             >
-              <FaFacebook size={30} />
+              <BsFacebook size={30} />
+            </Link>
+            <Link
+              href={personalData.instagram}
+              target="_blank"
+              className="transition-all text-pink-500 hover:scale-125 duration-300"
+            >
+              <BsInstagram size={30} />
             </Link>
           </div>
 
@@ -110,19 +115,16 @@ const HeroSection = () => {
                 <span className="text-gray-400">{"', '"}</span>
                 <span className="text-amber-300">Redux</span>
                 <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Express</span>
-                <span className="text-gray-400">{"', '"}</span>
                 <span className="text-amber-300">Angular</span>
                 <span className="text-gray-400">{"', '"}</span>
                 <span className="text-amber-300">NestJS</span>
                 <span className="text-gray-400">{"', '"}</span>
+                <span className="text-amber-300">Express</span>
+                <span className="text-gray-400">{"', '"}</span>
                 <span className="text-amber-300">MySql</span>
                 <span className="text-gray-400">{"', '"}</span>
                 <span className="text-amber-300">MongoDB</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">TailwindCSS</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">SASS</span>
+
                 <span className="text-gray-400">{"']"}</span>
               </div>
               <div>
@@ -142,6 +144,13 @@ const HeroSection = () => {
               <div>
                 <span className="ml-4 lg:ml-8 mr-2 text-white">
                   problemSolver:
+                </span>
+                <span className="text-orange-400">true</span>
+                <span className="text-gray-400">,</span>
+              </div>
+              <div>
+                <span className="ml-4 lg:ml-8 mr-2 text-white">
+                  eagerToLearn:
                 </span>
                 <span className="text-orange-400">true</span>
                 <span className="text-gray-400">,</span>

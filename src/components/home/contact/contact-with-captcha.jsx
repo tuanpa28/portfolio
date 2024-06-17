@@ -5,6 +5,7 @@ import emailjs from "@emailjs/browser";
 import axios from "axios";
 import { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { TbMailForward } from "react-icons/tb";
 import { toast } from "react-toastify";
 
@@ -19,6 +20,7 @@ const ContactWithCaptcha = () => {
     email: false,
     required: false,
   });
+  const [isLoading, setIsLoading] = useState(false);
 
   const checkRequired = () => {
     if (input.email && input.message && input.name) {
@@ -60,6 +62,7 @@ const ContactWithCaptcha = () => {
     const options = { publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY };
 
     try {
+      setIsLoading(true);
       const res = await emailjs.send(serviceID, templateID, input, options);
 
       if (res.status === 200) {
@@ -72,6 +75,8 @@ const ContactWithCaptcha = () => {
       }
     } catch (error) {
       toast.error(error?.text || error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -141,16 +146,26 @@ const ContactWithCaptcha = () => {
           <div className="flex flex-col items-center gap-2">
             {error.required && (
               <p className="text-sm text-red-400">
-                Email and Message are required!
+                Name, Email and Message are required!
               </p>
             )}
             <button
-              className="flex items-center gap-1 hover:gap-3 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 px-5 md:px-12 py-2.5 md:py-3 text-center text-xs md:text-sm font-medium uppercase tracking-wider text-white no-underline transition-all duration-200 ease-out hover:text-white hover:no-underline md:font-semibold"
+              className={`${
+                isLoading && "opacity-60"
+              } flex items-center gap-1 hover:gap-3 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 px-5 md:px-12 py-2.5 md:py-3 text-center text-xs md:text-sm font-medium uppercase tracking-wider text-white no-underline transition-all duration-200 ease-out hover:text-white hover:no-underline md:font-semibold`}
               role="button"
+              disabled={isLoading}
               onClick={handleSendMail}
             >
               <span>Send Message</span>
-              <TbMailForward className="mt-1" size={18} />
+              {isLoading ? (
+                <AiOutlineLoading3Quarters
+                  className="mt-0.5 animate-spinner"
+                  size={18}
+                />
+              ) : (
+                <TbMailForward className="mt-0.5" size={18} />
+              )}
             </button>
           </div>
         </div>
