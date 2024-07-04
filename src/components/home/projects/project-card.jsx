@@ -52,12 +52,12 @@ const ProjectCard = ({ project }) => {
             <span className="text-gray-400">,</span>
           </div>
           <div className="ml-4 lg:ml-8 mr-2">
-            <span className="text-white">Description:</span>
+            <span className="text-white">description:</span>
             <span className="text-cyan-400">{" " + project.description}</span>
             <span className="text-gray-400">,</span>
           </div>
           <div className="ml-4 lg:ml-8 mr-2">
-            <span className="text-white">Preview:</span>
+            <span className="text-white">demo:</span>
             <span className="text-cyan-400">
               {" "}
               <Link
@@ -70,20 +70,57 @@ const ProjectCard = ({ project }) => {
             </span>
             <span className="text-gray-400">,</span>
           </div>
-          <div className="ml-4 lg:ml-8 mr-2">
-            <span className="text-white">sourceCode:</span>
-            <span className="text-cyan-400">
-              {" "}
-              <Link
-                target="_blank"
-                href={project.code}
-                className="hover:underline"
-              >
-                {project.code}
-              </Link>
-            </span>
-            <span className="text-gray-400">,</span>
-          </div>
+          {project.codeFrontend && (
+            <div className="ml-4 lg:ml-8 mr-2">
+              <span className="text-white">githubLinkFrontend:</span>
+              <span className="text-cyan-400">
+                {" "}
+                <Link
+                  target="_blank"
+                  href={project.codeFrontend}
+                  className="hover:underline"
+                >
+                  {project.codeFrontend}
+                </Link>
+              </span>
+              <span className="text-gray-400">,</span>
+            </div>
+          )}
+
+          {project.codeBackend && (
+            <div className="ml-4 lg:ml-8 mr-2">
+              <span className="text-white">githubLinkBackend:</span>
+              <span className="text-cyan-400">
+                {" "}
+                <Link
+                  target="_blank"
+                  href={project.codeBackend}
+                  className="hover:underline"
+                >
+                  {project.codeBackend}
+                </Link>
+              </span>
+              <span className="text-gray-400">,</span>
+            </div>
+          )}
+
+          {project.code && (
+            <div className="ml-4 lg:ml-8 mr-2">
+              <span className="text-white">code:</span>
+              <span className="text-cyan-400">
+                {" "}
+                <Link
+                  target="_blank"
+                  href={project.code}
+                  className="hover:underline"
+                >
+                  {project.code}
+                </Link>
+              </span>
+              <span className="text-gray-400">,</span>
+            </div>
+          )}
+
           <div>
             <span className="text-gray-400">{`};`}</span>
           </div>

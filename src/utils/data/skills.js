@@ -9,7 +9,7 @@ export const skillsData = [
   "Angular",
   "Tailwind",
   "MongoDB",
-  "MySQL",
+  "PostgreSQL",
   "Git",
   "Bootstrap",
   "Figma",

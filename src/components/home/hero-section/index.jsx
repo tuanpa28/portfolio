@@ -49,13 +49,6 @@ const HeroSection = () => {
             >
               <BsFacebook size={30} />
             </Link>
-            <Link
-              href={personalData.instagram}
-              target="_blank"
-              className="transition-all text-pink-500 hover:scale-125 duration-300"
-            >
-              <BsInstagram size={30} />
-            </Link>
           </div>
 
           <div className="flex items-center gap-3">
@@ -119,9 +112,9 @@ const HeroSection = () => {
                 <span className="text-gray-400">{"', '"}</span>
                 <span className="text-amber-300">NestJS</span>
                 <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Express</span>
+                <span className="text-amber-300">NodeJs</span>
                 <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">MySql</span>
+                <span className="text-amber-300">SQL</span>
                 <span className="text-gray-400">{"', '"}</span>
                 <span className="text-amber-300">MongoDB</span>
 
