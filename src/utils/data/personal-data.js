@@ -3,7 +3,7 @@ export const personalData = {
   profile: "/profile.jpg",
   designation: "Web Developer",
   description:
-    "My name is Pham Anh Tuan, and I am a passionate programmer who thrives on learning and exploring new technologies. I am deeply interested in all aspects of web application development and am dedicated to making the web more accessible to everyone. My primary expertise lies in JavaScript, and I enjoy leveraging it to accomplish a wide range of tasks. I am open to job opportunities that align with my skills and interests.",
+    "My name is Pham Anh Tuan, and I am a passionate programmer who thrives on learning and exploring new technologies. My primary expertise lies in JavaScript, and I enjoy leveraging it to accomplish a wide range of tasks. I am always eager to expand my knowledge and skill set, continuously seeking out new challenges and opportunities to grow myself.",
   email: "phamanhtuan2833@gmail.com",
   phone: "0987 957 355",
   address: "My Dinh, Nam Tu Liem, Ha Noi",

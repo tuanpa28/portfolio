@@ -2,7 +2,7 @@ export const educations = [
   {
     id: 1,
     title: "Bachelor Degree",
-    duration: "August 2024 - Present",
+    duration: "July 2024 - Present",
     institution: "University of Transport and Communications",
   },
   {

@@ -6,7 +6,7 @@ export const projectsData = [
     id: 1,
     name: "Website Social Network",
     description:
-      "Manage login with JWT, Follow, Like, Comment, Search, User Suggestions,... ",
+      "Manage authentication with JWT, Post articles with video or photo, Follow user, Like article, Comment article, Search, User suggestions, Auto play video, Auto download more articles,...",
     tools: [
       "NextJS",
       "TanStack Query",
@@ -26,7 +26,7 @@ export const projectsData = [
     id: 2,
     name: "Website Soccer Field Booking",
     description:
-      "Manage login with JWT, assign permissions, schedule soccer fields, make payments, find matches,... ",
+      "Manage authentication with JWT, Booking, Payments, Find opponents, Filter soccer fields by location,...",
     tools: [
       "React",
       "Redux Toolkit",
@@ -45,7 +45,7 @@ export const projectsData = [
   },
   {
     id: 3,
-    name: "Website Selling Clothes",
+    name: "Website Selling Fashion",
     description: "",
     tools: [
       "React",
